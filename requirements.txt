@@ -1,0 +1,5 @@
+streamlit>=1.40,<2
+crewai==1.15.23
+crewai-tools==1.15.23
+litellm==1.103.2
+groq>=0.30.0
