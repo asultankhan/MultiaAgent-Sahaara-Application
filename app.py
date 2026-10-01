@@ -1,6 +1,17 @@
 import os
 
 import streamlit as st
+import os
+
+import streamlit as st
+
+# Fix CrewAI + Groq cache_breakpoint compatibility
+try:
+    import crewai.llms.cache as crew_cache
+    crew_cache.mark_cache_breakpoint = lambda msg: msg
+except Exception:
+    pass
+
 from crewai import Agent, Crew, LLM, Process, Task
 
 
